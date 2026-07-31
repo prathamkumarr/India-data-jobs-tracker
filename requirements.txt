@@ -1,0 +1,8 @@
+requests
+sqlalchemy
+psycopg2-binary
+pandas
+python-dotenv
+google-generativeai
+dbt-postgres
+streamlit
