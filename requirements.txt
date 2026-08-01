@@ -6,3 +6,4 @@ python-dotenv
 google-generativeai
 dbt-postgres
 streamlit
+plotly
