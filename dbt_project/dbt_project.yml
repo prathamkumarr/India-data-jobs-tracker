@@ -1,0 +1,15 @@
+name: 'india_jobs'
+version: '1.0.0'
+profile: 'india_jobs'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+
+models:
+  india_jobs:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table

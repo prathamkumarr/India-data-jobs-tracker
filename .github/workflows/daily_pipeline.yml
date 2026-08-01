@@ -28,4 +28,12 @@ jobs:
 
       - name: Ingest job postings
         working-directory: ingestion
-        run: python ingest.py
+        run: python3 ingest.py
+
+      - name: Run dbt
+        working-directory: dbt_project
+        env:
+          DBT_PROFILES_DIR: .
+        run: |
+          dbt seed
+          dbt build

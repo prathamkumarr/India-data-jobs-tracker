@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_jobs
+    columns:
+      - name: job_id
+        tests:
+          - unique
+          - not_null
+      - name: city
+        tests:
+          - accepted_values:
+              values: ['Bangalore','Gurugram','Noida','Delhi','Hyderabad','Pune','Mumbai','Chennai','Other / Remote']
+
+  - name: int_job_skills
+    columns:
+      - name: job_id
+        tests:
+          - not_null
+
+  - name: mart_skill_demand
+    columns:
+      - name: skill
+        tests:
+          - unique
+          - not_null
