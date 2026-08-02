@@ -2,7 +2,7 @@
 
 **A live data pipeline that collects Indian data-analyst job postings every morning, tracks how they change over time, and publishes the findings to a public dashboard.**
 
-**[View the live dashboard →](https://india-data-jobs-tracker-eyeghqo48snohrbuml8uq4.streamlit.app)**
+**[View the live dashboard →](https://india-data-jobs-tracker.streamlit.app)**
 
 ![Dashboard](docs/dashboard-hero.png)
 
