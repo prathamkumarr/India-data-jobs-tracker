@@ -129,7 +129,12 @@ That distinction — a snapshot log rather than a current-state table — is the
 ### Reliability
 
 The pipeline failed on its first scheduled run: Adzuna returned a `503` on one page, and a single failed HTTP call aborted the entire day's collection. Ingestion now retries with exponential backoff and degrades gracefully — if a page fails after three attempts it's logged and skipped, so one bad response costs 50 postings instead of a full day.
+
+![Workflow run history](docs/pipeline-history.png)
+*Run #3 failed on a third-party 503. Runs #4 onward are green after adding retry logic.*
+
 ![Daily pipeline run](docs/pipeline-run.png)
+*A single scheduled run — ingestion, dbt models, and all six data tests.*
 
 ### Data quality
 
